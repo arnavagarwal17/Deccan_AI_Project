@@ -1,0 +1,71 @@
+{
+  "task_id": "luxurious-coffeeroaster-163d29",
+  "prose": "# Kivu Highlands: Creative & Technical Landing Page Brief\n\n## 1. Brand Identity & Vision\n**Kivu Highlands** is an artisanal single-origin coffee roastery committed to high-altitude terroir, Dawn-cycle roasting, and sustainable producer partnerships.\nThe brand's aesthetic posture is **luxurious**: refined, understated, and velvety, featuring luminous metallic specular highlights and deliberate slow reveals.\n\n## 2. Technical Deliverable Contract\nThe developer must deliver a single self-contained `index.html` file hosting an animated Three.js scene utilizing the vendored offline library `vendor/three.min.js`. External CDN script tags or network calls are prohibited.\n\n## 3. Required Copy Architecture\nThe following exact copy strings must be prominently structured within semantic DOM overlay elements:\n- `Kivu Highlands`\n- `Ethical High Altitude Harvest`\n- `Join Subscription`\n\nThe primary headline must showcase `Kivu Highlands`, accompanied by the descriptive tagline `Ethical High Altitude Harvest`, anchored by a clickable action button `Join Subscription`.\n\n## 4. Visual Palette & Lighting\nThe visual composition must be strictly constructed from the following color palette:\n- `#18122B`\n- `#393053`\n- `#635985`\n- `#F5EBEB`\n\nLighting must emphasize depth, structural volumetric shadows, and ambient clarity while preserving WCAG AA contrast compliance for all text overlays.\n\n## 5. Kinetic & Interactive Narrative\n- **Introductory Sequence**: The 3D scene must animate into place, settling smoothly within the required duration window.\n- **Allowed Kinetic Profiles**: All transitions must adhere strictly to permitted easing curves (`ease-out`, `cubic-bezier`, `easeInOutQuad`).\n- **Interactive Engagement**: Incorporate responsive `magnetic-button` behavior reacting gracefully to pointer input.\n- **Accessibility**: Respect `prefers-reduced-motion` media queries by freezing or simplifying dynamic transformations when requested.",
+  "spec_echo": {
+    "product_category": "coffee-roaster",
+    "mood": "luxurious",
+    "palette": [
+      "#18122B",
+      "#393053",
+      "#635985",
+      "#F5EBEB"
+    ],
+    "required_copy": [
+      "Kivu Highlands",
+      "Ethical High Altitude Harvest",
+      "Join Subscription"
+    ],
+    "motion_budget_ms": [
+      800,
+      1600
+    ],
+    "allowed_easings": [
+      "ease-out",
+      "cubic-bezier",
+      "easeInOutQuad"
+    ],
+    "interaction": "magnetic-button"
+  },
+  "path": "cache",
+  "cache_key": "bb801b29d1922f014cdb072cfb048b3153bd5d75442b1bda17b4a805b2457b14",
+  "eval_count": 0,
+  "eval_duration": 0,
+  "spec": {
+    "task_id": "luxurious-coffeeroaster-163d29",
+    "product_category": "coffee-roaster",
+    "mood": "luxurious",
+    "palette": [
+      "#18122B",
+      "#393053",
+      "#635985",
+      "#F5EBEB"
+    ],
+    "palette_tolerance": 28.0,
+    "required_copy": [
+      "Kivu Highlands",
+      "Ethical High Altitude Harvest",
+      "Join Subscription"
+    ],
+    "motion_budget_ms": [
+      800,
+      1600
+    ],
+    "allowed_easings": [
+      "ease-out",
+      "cubic-bezier",
+      "easeInOutQuad"
+    ],
+    "interaction": "magnetic-button",
+    "perf": {
+      "max_draw_calls": 50,
+      "first_frame_ms": 200
+    },
+    "a11y": {
+      "min_contrast_ratio": 4.5,
+      "reduced_motion_respected": true
+    },
+    "heldout": true
+  },
+  "max_similarity": 0.7230858637741723,
+  "heldout": true
+}

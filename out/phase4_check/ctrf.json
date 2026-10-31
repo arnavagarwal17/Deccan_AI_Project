@@ -1,0 +1,144 @@
+{
+  "results": {
+    "tool": {
+      "name": "harbor-webgl-verifier"
+    },
+    "summary": {
+      "tests": 5,
+      "passed": 5,
+      "failed": 0
+    },
+    "tests": [
+      {
+        "name": "compiles",
+        "status": "passed",
+        "duration": 0,
+        "message": "Gate compiles passed successfully."
+      },
+      {
+        "name": "webgl_context",
+        "status": "passed",
+        "duration": 0,
+        "message": "Gate webgl_context passed successfully."
+      },
+      {
+        "name": "no_console_errors",
+        "status": "passed",
+        "duration": 0,
+        "message": "Gate no_console_errors passed successfully."
+      },
+      {
+        "name": "first_frame_under_budget",
+        "status": "passed",
+        "duration": 0,
+        "message": "Gate first_frame_under_budget passed successfully."
+      },
+      {
+        "name": "required_copy_present",
+        "status": "passed",
+        "duration": 0,
+        "message": "Gate required_copy_present passed successfully."
+      }
+    ],
+    "extra": {
+      "reward_binary": 1,
+      "gate_pass": true,
+      "quality": 0.8441,
+      "families": {
+        "render": 0.7688,
+        "code": 0.9525,
+        "judge": null
+      },
+      "family_breakdown": {
+        "render": {
+          "score": 0.7688,
+          "sub_signals": {
+            "palette_adherence": 0.473,
+            "text_contrast": 1.0,
+            "temporal_motion": 0.8193,
+            "composition_balance": 0.9893
+          },
+          "diagnostics": {
+            "palette": {
+              "mean_lab_distance": 1.5132545217315188,
+              "distinct_colors_meeting_coverage": 0,
+              "gaming_penalty": 0.5
+            },
+            "contrast": {
+              "ratios": [
+                9.781064987182617,
+                9.210200309753418,
+                4.140949726104736
+              ],
+              "mean_contrast": 7.710738341013591
+            },
+            "motion": {
+              "diffs": [
+                0.03629665821790695,
+                0.032962240278720856,
+                0.03674587607383728,
+                0.03606336936354637,
+                0.03832031413912773,
+                0.03733506798744202,
+                0.036780599504709244
+              ],
+              "mean_diff": 0.036357732223612924,
+              "intensity_score": 0.7271546444722584,
+              "cv_score": 0.9575626559805444
+            },
+            "balance": {
+              "cx": 646.3713953387406,
+              "cy": 355.462759163966,
+              "distance": 7.821843322817227
+            }
+          }
+        },
+        "code": {
+          "score": 0.9525,
+          "sub_signals": {
+            "duration_in_budget": 1.0,
+            "easing_allowed": 1.0,
+            "draw_calls": 1.0,
+            "frame_stability": 0.6836,
+            "reduced_motion": 1.0
+          },
+          "diagnostics": {
+            "duration": {
+              "detected_durations": [
+                3000.0
+              ],
+              "chosen_duration": 3000.0,
+              "in_budget": true
+            },
+            "easing": {
+              "detected": [
+                "easeInOutQuad",
+                "easeInOutQuad"
+              ],
+              "valid_count": 2,
+              "allowed": [
+                "ease-in-out",
+                "cubic-bezier",
+                "easeOutCubic"
+              ]
+            },
+            "draw_calls": {
+              "max_draw_calls": 4,
+              "budget": 40
+            },
+            "stability": {
+              "variance": 4.629375059455636,
+              "mean_ms": 2.2750000208616257
+            },
+            "reduced_motion": {
+              "required": true,
+              "present": true
+            }
+          }
+        },
+        "judge": null
+      },
+      "notes": []
+    }
+  }
+}

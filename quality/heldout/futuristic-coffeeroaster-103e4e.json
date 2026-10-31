@@ -1,0 +1,71 @@
+{
+  "task_id": "futuristic-coffeeroaster-103e4e",
+  "prose": "# Origin Roast: Creative & Technical Landing Page Brief\n\n## 1. Brand Identity & Vision\n**Origin Roast** is an artisanal single-origin coffee roastery committed to high-altitude terroir, Dawn-cycle roasting, and sustainable producer partnerships.\nThe brand's aesthetic posture is **futuristic**: technological, hyper-precise, and holographic, illuminated by neon grid lines and complex wireframe geometries.\n\n## 2. Technical Deliverable Contract\nThe developer must deliver a single self-contained `index.html` file hosting an animated Three.js scene utilizing the vendored offline library `vendor/three.min.js`. External CDN script tags or network calls are prohibited.\n\n## 3. Required Copy Architecture\nThe following exact copy strings must be prominently structured within semantic DOM overlay elements:\n- `Origin Roast`\n- `Small Batch Single Origin`\n- `Taste the Harvest`\n\nThe primary headline must showcase `Origin Roast`, accompanied by the descriptive tagline `Small Batch Single Origin`, anchored by a clickable action button `Taste the Harvest`.\n\n## 4. Visual Palette & Lighting\nThe visual composition must be strictly constructed from the following color palette:\n- `#0A192F`\n- `#172A45`\n- `#64FFDA`\n- `#CCD6F6`\n\nLighting must emphasize depth, structural volumetric shadows, and ambient clarity while preserving WCAG AA contrast compliance for all text overlays.\n\n## 5. Kinetic & Interactive Narrative\n- **Introductory Sequence**: The 3D scene must animate into place, settling smoothly within the required duration window.\n- **Allowed Kinetic Profiles**: All transitions must adhere strictly to permitted easing curves (`ease-out`, `easeInOutCubic`, `cubic-bezier`).\n- **Interactive Engagement**: Incorporate responsive `scroll-parallax` behavior reacting gracefully to pointer input.\n- **Accessibility**: Respect `prefers-reduced-motion` media queries by freezing or simplifying dynamic transformations when requested.",
+  "spec_echo": {
+    "product_category": "coffee-roaster",
+    "mood": "futuristic",
+    "palette": [
+      "#0A192F",
+      "#172A45",
+      "#64FFDA",
+      "#CCD6F6"
+    ],
+    "required_copy": [
+      "Origin Roast",
+      "Small Batch Single Origin",
+      "Taste the Harvest"
+    ],
+    "motion_budget_ms": [
+      2000,
+      4000
+    ],
+    "allowed_easings": [
+      "ease-out",
+      "easeInOutCubic",
+      "cubic-bezier"
+    ],
+    "interaction": "scroll-parallax"
+  },
+  "path": "cache",
+  "cache_key": "74cf16a9d17623dc4a49145da9fb1cfeae42a30096c2f20cb9dc8fd0f0a61655",
+  "eval_count": 0,
+  "eval_duration": 0,
+  "spec": {
+    "task_id": "futuristic-coffeeroaster-103e4e",
+    "product_category": "coffee-roaster",
+    "mood": "futuristic",
+    "palette": [
+      "#0A192F",
+      "#172A45",
+      "#64FFDA",
+      "#CCD6F6"
+    ],
+    "palette_tolerance": 28.0,
+    "required_copy": [
+      "Origin Roast",
+      "Small Batch Single Origin",
+      "Taste the Harvest"
+    ],
+    "motion_budget_ms": [
+      2000,
+      4000
+    ],
+    "allowed_easings": [
+      "ease-out",
+      "easeInOutCubic",
+      "cubic-bezier"
+    ],
+    "interaction": "scroll-parallax",
+    "perf": {
+      "max_draw_calls": 25,
+      "first_frame_ms": 200
+    },
+    "a11y": {
+      "min_contrast_ratio": 4.5,
+      "reduced_motion_respected": true
+    },
+    "heldout": true
+  },
+  "max_similarity": 0.8207542789431976,
+  "heldout": true
+}

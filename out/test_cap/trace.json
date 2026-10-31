@@ -1,0 +1,110 @@
+{
+  "webgl_created": true,
+  "webgl_type": "webgl2",
+  "renderer_string": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+  "shader_link_ok": true,
+  "shader_errors": [],
+  "console_errors": [],
+  "console_warnings": [
+    "Scripts \"build/three.js\" and \"build/three.min.js\" are deprecated with r150+, and will be removed with r160. Please use ES Modules or alternatives: https://threejs.org/docs/index.html#manual/en/introduction/Installation"
+  ],
+  "draw_calls_per_frame": [
+    4,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "max_draw_calls": 4,
+  "first_frame_ms": 0,
+  "frame_execution_times_ms": [
+    6.900000095367432,
+    1.6999999284744263,
+    1.899999976158142,
+    1.899999976158142,
+    1.399999976158142,
+    1.7999999523162842,
+    1.399999976158142,
+    1.3000000715255737
+  ],
+  "network_violations": [],
+  "dom_elements": [
+    {
+      "text": "NextGen Wealth",
+      "tag": "h1",
+      "rect": {
+        "x": 433.078125,
+        "y": 255.53125,
+        "width": 413.84375,
+        "height": 74.375
+      },
+      "color": "rgb(241, 246, 249)",
+      "backgroundColor": "rgba(11, 25, 44, 0.4)",
+      "fontSize": "51.2px",
+      "opacity": "1"
+    },
+    {
+      "text": "Calm Investing",
+      "tag": "p",
+      "rect": {
+        "x": 554.40625,
+        "y": 345.90625,
+        "width": 171.1875,
+        "height": 36.375
+      },
+      "color": "rgb(241, 246, 249)",
+      "backgroundColor": "rgba(11, 25, 44, 0.4)",
+      "fontSize": "22.4px",
+      "opacity": "1"
+    },
+    {
+      "text": "Get Started",
+      "tag": "button",
+      "rect": {
+        "x": 556.375,
+        "y": 414.28125,
+        "width": 167.25,
+        "height": 50.1875
+      },
+      "color": "rgb(241, 246, 249)",
+      "backgroundColor": "rgb(30, 62, 98)",
+      "fontSize": "17.6px",
+      "opacity": "1"
+    },
+    {
+      "text": "(function () {\n      const prefersReducedMotion = window.matchMedia(\"(prefers-reduced-motion: reduce)\").matches;\n      const canvas = document.getElementById(\"webgl-canvas\");\n      const width = window.innerWidth || 1280;\n      const height = window.innerHeight || 720;\n\n      // Renderer setup\n      const renderer = new THREE.WebGLRenderer({\n        canvas: canvas,\n        antialias: true,\n        alpha: false,\n        powerPreference: \"high-performance\"\n      });\n      renderer.setSize(width, height);\n      renderer.setPixelRatio(1.0);\n      renderer.setClearColor(0x0B192C, 1.0);\n\n      // Scene and Camera\n      const scene = new THREE.Scene();\n      scene.background = new THREE.Color(0x0B192C);\n\n      const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100);\n      camera.position.set(0, 3, 10);\n      camera.lookAt(0, 0, 0);\n\n      // Lighting\n      const ambientLight = new THREE.AmbientLight(0x1E3E62, 1.5);\n      scene.add(ambientLight);\n\n      const dirLight = new THREE.DirectionalLight(0xF1F6F9, 1.8);\n      dirLight.position.set(5, 10, 7);\n      scene.add(dirLight);\n\n      // Wave Geometry and Material\n      const gridX = 40;\n      const gridY = 40;\n      const geometry = new THREE.PlaneGeometry(16, 16, gridX, gridY);\n      geometry.rotateX(-Math.PI / 2.5);\n\n      const material = new THREE.MeshStandardMaterial({\n        color: 0x1E3E62,\n        roughness: 0.35,\n        metalness: 0.2,\n        wireframe: false,\n        flatShading: true\n      });\n\n      const waveMesh = new THREE.Mesh(geometry, material);\n      waveMesh.position.set(0, -1, 0);\n      scene.add(waveMesh);\n\n      // Background geometric ring accent\n      const ringGeo = new THREE.TorusGeometry(4.5, 0.08, 16, 64);\n      const ringMat = new THREE.MeshBasicMaterial({ color: 0xF1F6F9, wireframe: true });\n      const ringMesh = new THREE.Mesh(ringGeo, ringMat);\n      ringMesh.position.set(0, 0.5, -3);\n      scene.add(ringMesh);\n\n      const posAttribute = geometry.attributes.position;\n      const originalZ = new Float32Array(posAttribute.count);\n      for (let i = 0; i < posAttribute.count; i++) {\n        originalZ[i] = posAttribute.getZ(i);\n      }\n\n      // Timing and motion configuration\n      const introDurationMs = 1800; // Motion budget [1200, 2400]\n      let startTime = null;\n      let mouseX = 0;\n      let mouseY = 0;\n      let targetTiltX = 0;\n      let targetTiltY = 0;\n\n      // Hover interaction\n      window.addEventListener(\"mousemove\", function (e) {\n        const nx = (e.clientX / window.innerWidth) * 2 - 1;\n        const ny = -(e.clientY / window.innerHeight) * 2 + 1;\n        targetTiltX = ny * 0.15;\n        targetTiltY = nx * 0.25;\n      });\n\n      function easeInOutQuad(t) {\n        return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;\n      }\n\n      function animate(now) {\n        requestAnimationFrame(animate);\n\n        if (startTime === null) startTime = now;\n        const elapsed = now - startTime;\n        const progress = prefersReducedMotion ? 1.0 : Math.min(1.0, elapsed / introDurationMs);\n        const introFactor = easeInOutQuad(progress);\n\n        // Smooth wave undulation\n        const timeSec = prefersReducedMotion ? 0 : now * 0.001;\n        for (let i = 0; i < posAttribute.count; i++) {\n          const u = (i % (gridX + 1)) / gridX;\n          const v = Math.floor(i / (gridX + 1)) / gridY;\n          const wave1 = Math.sin(u * 5.0 + timeSec * 1.5) * 0.45;\n          const wave2 = Math.cos(v * 4.0 + timeSec * 1.2) * 0.35;\n          const elevation = (wave1 + wave2) * introFactor;\n          posAttribute.setZ(i, originalZ[i] + elevation);\n        }\n        posAttribute.needsUpdate = true;\n        geometry.computeVertexNormals();\n\n        // Tilt response\n        mouseX += (targetTiltX - mouseX) * 0.05;\n        mouseY += (targetTiltY - mouseY) * 0.05;\n        waveMesh.rotation.z = mouseY * 0.5;\n        waveMesh.rotation.x = mouseX * 0.5;\n        ringMesh.rotation.z = timeSec * 0.2;\n\n        renderer.render(scene, camera);\n      }\n\n      // Initial frame trigger\n      renderer.render(scene, camera);\n      requestAnimationFrame(animate);\n    })();",
+      "tag": "script",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "color": "rgb(241, 246, 249)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "fontSize": "16px",
+      "opacity": "1"
+    }
+  ],
+  "captured_frames": [
+    "frame_00.png",
+    "frame_01.png",
+    "frame_02.png",
+    "frame_03.png",
+    "frame_04.png",
+    "frame_05.png",
+    "frame_06.png",
+    "frame_07.png"
+  ],
+  "viewport": {
+    "width": 1280,
+    "height": 720,
+    "dpr": 1.0
+  },
+  "success": true,
+  "worker_spawn_attempted": false,
+  "canvas_count": 1
+}

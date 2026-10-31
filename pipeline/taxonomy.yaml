@@ -1,0 +1,89 @@
+# pipeline/taxonomy.yaml
+# Combinatorial axes with >= 6 values per axis for task space generation.
+
+product_categories:
+  - "fintech-app"
+  - "indie-game"
+  - "coffee-roaster"
+  - "ai-research-lab"
+  - "sustainable-fashion"
+  - "cybersecurity-platform"
+  - "space-logistics"
+  - "health-biotech"
+
+moods:
+  - "calm"
+  - "energetic"
+  - "luxurious"
+  - "minimal"
+  - "futuristic"
+  - "playful"
+
+palettes:
+  - ["#0B192C", "#1E3E62", "#000000", "#F1F6F9"] # Deep navy & slate (Fintech / Calm)
+  - ["#0D0D0D", "#FF007F", "#00F0FF", "#FAFAFA"] # Cyberpunk neon (Futuristic / Game)
+  - ["#1A120B", "#3C2A21", "#D5CEA3", "#E5E5CB"] # Warm earthy roast (Coffee / Artisanal)
+  - ["#0A192F", "#172A45", "#64FFDA", "#CCD6F6"] # Obsidian & mint glow (Security / AI)
+  - ["#1B4332", "#2D6A4F", "#D8F3DC", "#FFFFFF"] # Forest green & moss (Sustainable)
+  - ["#18122B", "#393053", "#635985", "#F5EBEB"] # Royal plum & pearl (Luxurious)
+  - ["#2B2E4A", "#E84545", "#903749", "#F7F7F7"] # Crimson pulse (Energetic / Game)
+  - ["#050505", "#161616", "#8E8E93", "#FFFFFF"] # Monochrome stark (Minimal)
+
+motion_budgets:
+  - [800, 1600]   # Swift / snappy
+  - [1000, 2000]  # Balanced rapid
+  - [1200, 2400]  # Standard moderate
+  - [1500, 3000]  # Deliberate graceful
+  - [1800, 3500]  # Extended cinematic
+  - [2000, 4000]  # Serene ambient float
+
+allowed_easings:
+  - ["ease-out", "cubic-bezier", "easeInOutQuad"]
+  - ["ease-in-out", "cubic-bezier", "easeOutCubic"]
+  - ["linear", "ease-out", "easeInQuad"]
+  - ["cubic-bezier", "easeOutExpo", "easeInOutQuad"]
+  - ["ease-out", "easeInOutCubic", "cubic-bezier"]
+  - ["ease-in-out", "cubic-bezier", "easeInOutQuint"]
+
+interactions:
+  - "hover-tilt"
+  - "scroll-parallax"
+  - "cursor-ripple"
+  - "magnetic-button"
+  - "drag-rotate"
+  - "none"
+
+copy_pools:
+  fintech-app:
+    titles: ["NextGen Wealth", "Vanguard Treasury", "Aura Capital", "Zenith Flow"]
+    subtitles: ["Calm Investing", "Sovereign Asset Protocol", "Autonomous Yield Intelligence"]
+    ctas: ["Get Started", "Open Account", "Explore Platform"]
+  indie-game:
+    titles: ["Void Runner", "Echoes of Aethel", "Neon Fracture", "Chrono Weaver"]
+    subtitles: ["Survive the Continuum", "A Pixel Odyssey", "Master the Spatial Rift"]
+    ctas: ["Play Demo", "Wishlist Now", "Enter Realm"]
+  coffee-roaster:
+    titles: ["Origin Roast", "Kivu Highlands", "Amber Bean Co", "Solstice Coffee"]
+    subtitles: ["Small Batch Single Origin", "Roasted at Dawn", "Ethical High Altitude Harvest"]
+    ctas: ["Order Beans", "Join Subscription", "Taste the Harvest"]
+  ai-research-lab:
+    titles: ["Cognitive Nexus", "Synapse AI", "Deep Horizon", "Tensor Frontier"]
+    subtitles: ["Frontier Model Reasoning", "Decentralized Alignment Systems", "Next Epoch Intelligence"]
+    ctas: ["Read Whitepaper", "View Benchmarks", "Access Model"]
+  sustainable-fashion:
+    titles: ["Verdant Thread", "Circular Atelier", "Earthbound Cloth", "Aeon Studio"]
+    subtitles: ["Zero Waste Botanicals", "Regenerative Wardrobe", "Carbon Negative Silks"]
+    ctas: ["Shop Collection", "Our Manifesto", "Discover Craft"]
+  cybersecurity-platform:
+    titles: ["Aegis Sentinel", "Ironclad Defense", "Cipher Vault", "ZeroTrust Core"]
+    subtitles: ["Continuous Threat Neutralization", "Cryptographic Identity Fabric", "Autonomous Perimeter Defense"]
+    ctas: ["Schedule Audit", "Deploy Sensor", "Request Briefing"]
+  space-logistics:
+    titles: ["Orbital Vector", "Helios Cargo", "Lunar Transit Co", "Astra Freight"]
+    subtitles: ["Cislunar Supply Networks", "Autonomous Payload Insertion", "Interplanetary Freight Routing"]
+    ctas: ["Book Trajectory", "Manifest Cargo", "View Fleet"]
+  health-biotech:
+    titles: ["Helix Therapeutics", "Vivant Bio", "OmniGene Labs", "Cellular Core"]
+    subtitles: ["Precision Molecular Architecture", "Synthetic Epigenetics", "Targeted Longevity Therapeutics"]
+    ctas: ["Review Trials", "Explore Platform", "Partner With Us"]
+

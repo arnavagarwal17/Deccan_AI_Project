@@ -1,0 +1,71 @@
+{
+  "task_id": "luxurious-sustainablefashion-19eb53",
+  "prose": "# Verdant Thread: Creative & Technical Landing Page Brief\n\n## 1. Brand Identity & Vision\n**Verdant Thread** is a circular botanical textile atelier engineering carbon-negative luxury silhouettes and zero-waste regenerative garments.\nThe brand's aesthetic posture is **luxurious**: refined, understated, and velvety, featuring luminous metallic specular highlights and deliberate slow reveals.\n\n## 2. Technical Deliverable Contract\nThe developer must deliver a single self-contained `index.html` file hosting an animated Three.js scene utilizing the vendored offline library `vendor/three.min.js`. External CDN script tags or network calls are prohibited.\n\n## 3. Required Copy Architecture\nThe following exact copy strings must be prominently structured within semantic DOM overlay elements:\n- `Verdant Thread`\n- `Carbon Negative Silks`\n- `Shop Collection`\n\nThe primary headline must showcase `Verdant Thread`, accompanied by the descriptive tagline `Carbon Negative Silks`, anchored by a clickable action button `Shop Collection`.\n\n## 4. Visual Palette & Lighting\nThe visual composition must be strictly constructed from the following color palette:\n- `#1B4332`\n- `#2D6A4F`\n- `#D8F3DC`\n- `#FFFFFF`\n\nLighting must emphasize depth, structural volumetric shadows, and ambient clarity while preserving WCAG AA contrast compliance for all text overlays.\n\n## 5. Kinetic & Interactive Narrative\n- **Introductory Sequence**: The 3D scene must animate into place, settling smoothly within the required duration window.\n- **Allowed Kinetic Profiles**: All transitions must adhere strictly to permitted easing curves (`ease-in-out`, `cubic-bezier`, `easeInOutQuint`).\n- **Interactive Engagement**: Incorporate responsive `cursor-ripple` behavior reacting gracefully to pointer input.\n- **Accessibility**: Respect `prefers-reduced-motion` media queries by freezing or simplifying dynamic transformations when requested.",
+  "spec_echo": {
+    "product_category": "sustainable-fashion",
+    "mood": "luxurious",
+    "palette": [
+      "#1B4332",
+      "#2D6A4F",
+      "#D8F3DC",
+      "#FFFFFF"
+    ],
+    "required_copy": [
+      "Verdant Thread",
+      "Carbon Negative Silks",
+      "Shop Collection"
+    ],
+    "motion_budget_ms": [
+      1800,
+      3500
+    ],
+    "allowed_easings": [
+      "ease-in-out",
+      "cubic-bezier",
+      "easeInOutQuint"
+    ],
+    "interaction": "cursor-ripple"
+  },
+  "path": "cache",
+  "cache_key": "e994e2255adf58bde50dee9a635f2056c5947c64c81da2b3e01eff8fe48f7506",
+  "eval_count": 0,
+  "eval_duration": 0,
+  "spec": {
+    "task_id": "luxurious-sustainablefashion-19eb53",
+    "product_category": "sustainable-fashion",
+    "mood": "luxurious",
+    "palette": [
+      "#1B4332",
+      "#2D6A4F",
+      "#D8F3DC",
+      "#FFFFFF"
+    ],
+    "palette_tolerance": 28.0,
+    "required_copy": [
+      "Verdant Thread",
+      "Carbon Negative Silks",
+      "Shop Collection"
+    ],
+    "motion_budget_ms": [
+      1800,
+      3500
+    ],
+    "allowed_easings": [
+      "ease-in-out",
+      "cubic-bezier",
+      "easeInOutQuint"
+    ],
+    "interaction": "cursor-ripple",
+    "perf": {
+      "max_draw_calls": 25,
+      "first_frame_ms": 150
+    },
+    "a11y": {
+      "min_contrast_ratio": 4.5,
+      "reduced_motion_respected": true
+    },
+    "heldout": true
+  },
+  "max_similarity": 0.816440750148341,
+  "heldout": true
+}

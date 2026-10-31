@@ -1,0 +1,22 @@
+# pipeline/models.yaml
+# Pinned local model configuration for LLM generation and caching.
+
+ollama_endpoint: "http://127.0.0.1:11434"
+openai_compat_url: "http://127.0.0.1:11434/v1/chat/completions"
+
+models:
+  brief_model: "qwen2.5:3b"
+  code_model: "qwen2.5-coder:7b"
+
+options:
+  temperature: 0.0
+  num_predict: 2048
+
+# Recorded environment details:
+ollama_version: "0.40.13"
+model_digests:
+  brief_model: "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b"
+  code_model: "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364"
+
+# Fallback strategy: deterministic template-based generation in pipeline/fallback.py & fallback_solution.py
+# All responses are persistently cached in pipeline/cache/ keyed by hash(prompt_version, model, spec, seed).

@@ -1,0 +1,61 @@
+# reward/weights.yaml
+# Weight configurations and normalization parameters for quality scoring.
+# Every number has an explicit one-line origin comment explaining its derivation.
+
+families:
+  # 0.59: Render carries majority weight as pixels cannot be faked via source AST manipulation
+  render: 0.59
+  # 0.41: Code carries complementary weight for structural engineering, performance, and accessibility
+  code: 0.41
+  # 0.0: Reserved slot for future pinned vision model judge; omitted on CPU to prevent slow/noisy signals
+  judge: 0.0
+
+render_signals:
+  # 0.35: Palette adherence is the primary visual requirement in the client brief
+  palette_adherence: 0.35
+  # 0.25: Text contrast enforces WCAG accessibility standards on the rendered output
+  text_contrast: 0.25
+  # 0.25: Temporal motion ensures dynamic scene movement matches the requested mood
+  temporal_motion: 0.25
+  # 0.15: Composition balance measures visual weight distribution across the canvas
+  composition_balance: 0.15
+
+code_signals:
+  # 0.25: Duration compliance verifies the animation settles within the brief motion budget
+  duration_in_budget: 0.25
+  # 0.20: Easing adherence verifies the kinetic character matches the allowed curves
+  easing_allowed: 0.20
+  # 0.20: Draw call compliance protects GPU frame budget and enforces efficient rendering
+  draw_calls: 0.20
+  # 0.15: Frame stability checks execution time variance across ticks for jank-free performance
+  frame_stability: 0.15
+  # 0.20: Reduced motion checks OS preference respect for vestibular safety
+  reduced_motion: 0.20
+
+anti_gaming:
+  # 0.05: Minimum fraction of pixels a palette cluster must occupy to prevent invisible micro-fills
+  min_palette_coverage: 0.05
+  # 0.70: Maximum fraction a single palette cluster may occupy to prevent flat monotone cheat fills
+  max_palette_coverage: 0.70
+  # 3: Minimum distinct palette colors that must meet the coverage bounds
+  min_distinct_palette_colors: 3
+  # 0.5: Penalty factor applied to palette score if anti-gaming coverage bounds fail
+  palette_cheat_penalty: 0.5
+  # 0.01: Minimum average pixel difference across 16ms ticks to detect absolute frozen page (0.0 diff)
+  frozen_diff_threshold: 0.01
+  # 65.0: Maximum average pixel difference to avoid seizure-inducing strobing penalty
+  strobing_diff_threshold: 65.0
+
+mood_motion_bands:
+  # Calm mood expects low-intensity subtle ambient motion across 16ms ticks
+  calm: [0.05, 5.0]
+  # Minimal mood expects clean restrained transitions
+  minimal: [0.03, 4.0]
+  # Luxurious mood expects slow, silky, deliberate kinetic presence
+  luxurious: [0.1, 8.0]
+  # Futuristic mood expects sharp geometric oscillations
+  futuristic: [0.2, 12.0]
+  # Playful mood expects bouncy, noticeable kinetic activity
+  playful: [0.5, 15.0]
+  # Energetic mood expects high dynamic activity across frames
+  energetic: [1.0, 20.0]

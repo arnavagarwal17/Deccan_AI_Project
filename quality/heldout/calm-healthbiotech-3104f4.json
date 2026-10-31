@@ -1,0 +1,71 @@
+{
+  "task_id": "calm-healthbiotech-3104f4",
+  "prose": "# Vivant Bio: Creative & Technical Landing Page Brief\n\n## 1. Brand Identity & Vision\n**Vivant Bio** is a precision molecular medicine laboratory pioneering synthetic epigenetics and targeted cellular longevity interventions.\nThe brand's aesthetic posture is **calm**: tranquil, deliberate, and deeply grounded, employing gentle fluid surfaces and rhythmic ambient respirations.\n\n## 2. Technical Deliverable Contract\nThe developer must deliver a single self-contained `index.html` file hosting an animated Three.js scene utilizing the vendored offline library `vendor/three.min.js`. External CDN script tags or network calls are prohibited.\n\n## 3. Required Copy Architecture\nThe following exact copy strings must be prominently structured within semantic DOM overlay elements:\n- `Vivant Bio`\n- `Targeted Longevity Therapeutics`\n- `Explore Platform`\n\nThe primary headline must showcase `Vivant Bio`, accompanied by the descriptive tagline `Targeted Longevity Therapeutics`, anchored by a clickable action button `Explore Platform`.\n\n## 4. Visual Palette & Lighting\nThe visual composition must be strictly constructed from the following color palette:\n- `#0B192C`\n- `#1E3E62`\n- `#000000`\n- `#F1F6F9`\n\nLighting must emphasize depth, structural volumetric shadows, and ambient clarity while preserving WCAG AA contrast compliance for all text overlays.\n\n## 5. Kinetic & Interactive Narrative\n- **Introductory Sequence**: The 3D scene must animate into place, settling smoothly within the required duration window.\n- **Allowed Kinetic Profiles**: All transitions must adhere strictly to permitted easing curves (`ease-out`, `cubic-bezier`, `easeInOutQuad`).\n- **Interactive Engagement**: Incorporate responsive `magnetic-button` behavior reacting gracefully to pointer input.\n- **Accessibility**: Respect `prefers-reduced-motion` media queries by freezing or simplifying dynamic transformations when requested.",
+  "spec_echo": {
+    "product_category": "health-biotech",
+    "mood": "calm",
+    "palette": [
+      "#0B192C",
+      "#1E3E62",
+      "#000000",
+      "#F1F6F9"
+    ],
+    "required_copy": [
+      "Vivant Bio",
+      "Targeted Longevity Therapeutics",
+      "Explore Platform"
+    ],
+    "motion_budget_ms": [
+      1800,
+      3500
+    ],
+    "allowed_easings": [
+      "ease-out",
+      "cubic-bezier",
+      "easeInOutQuad"
+    ],
+    "interaction": "magnetic-button"
+  },
+  "path": "cache",
+  "cache_key": "ecb08716391dbfe9cdce7de62112d348602ffe00dc4d2669ba33e58acf0b228b",
+  "eval_count": 0,
+  "eval_duration": 0,
+  "spec": {
+    "task_id": "calm-healthbiotech-3104f4",
+    "product_category": "health-biotech",
+    "mood": "calm",
+    "palette": [
+      "#0B192C",
+      "#1E3E62",
+      "#000000",
+      "#F1F6F9"
+    ],
+    "palette_tolerance": 28.0,
+    "required_copy": [
+      "Vivant Bio",
+      "Targeted Longevity Therapeutics",
+      "Explore Platform"
+    ],
+    "motion_budget_ms": [
+      1800,
+      3500
+    ],
+    "allowed_easings": [
+      "ease-out",
+      "cubic-bezier",
+      "easeInOutQuad"
+    ],
+    "interaction": "magnetic-button",
+    "perf": {
+      "max_draw_calls": 35,
+      "first_frame_ms": 250
+    },
+    "a11y": {
+      "min_contrast_ratio": 4.5,
+      "reduced_motion_respected": true
+    },
+    "heldout": true
+  },
+  "max_similarity": 0.8439214415643881,
+  "heldout": true
+}
