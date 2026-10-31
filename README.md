@@ -1,3 +1,7 @@
+# Deccan AI Project — WebGL Task Factory & Evaluation Pipeline
+
+An automated framework designed to synthesize, validate, and benchmark LLM-generated interactive WebGL landing pages using local model inference (`qwen2.5:3b`), CPU-bound headless rendering (SwiftShader), and multi-variable deterministic reward evaluation.
+
 # Deccan AI — RL Task Factory (Phases 1–4)
 
 ## What This Is
